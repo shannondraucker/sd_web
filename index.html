@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shannon Draucker</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <!-- Bulma Version 0.7.1-->
+  <link rel="stylesheet" type="text/css" href="css/bulma-custom.css" >
+  <link rel="stylesheet" type="text/css" href="css/landing.css">
+
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <section class="hero is-info is-fullheight">
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top">
+        <!-- <div class="container" id="navbar-container"> -->
+          <div class="navbar-brand">
+            <a class="navbar-item"  onclick="toggleDiv('home');" style="font-size: 2em">
+              Shannon Draucker
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <!-- <span class="navbar-item">
+                <a class="button is-white is-outlined" onclick="toggleDiv('home');">
+                  <span class="icon">
+                    <i class="fas fa-home"></i>
+                  </span>
+                  <span>Home</span>
+                </a>
+              </span> -->
+              <span class="navbar-item">
+                <a class="button is-white is-outlined " onclick="toggleDiv('about');" id="button-about">
+                  <span class="icon">
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                  <span>About</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined " onclick="toggleDiv('cv');" id="button-cv">
+                  <span class="icon">
+                    <i class="fas fa-book"></i>
+                  </span>
+                  <span>CV</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <div class="dropdown" id="research_dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button is-white is-outlined " onclick="dropdownNav('research');"  id="button-research">
+                      <span class="icon">
+                        <i class="fas fa-book-reader"></i>
+                      </span>
+                      <span>Research</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu-research" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" onclick="toggleDiv('research-item1', true);"  id="dd-research-item1">
+                        Dissertation Project
+                      </a>
+                      <a class="dropdown-item" onclick="toggleDiv('research-item2', true);"  id="dd-research-item2">
+                        Articles & Book Reviews
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </span>
+              <span class="navbar-item">
+                <div class="dropdown" id="teaching_dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button is-white is-outlined " onclick="dropdownNav('teaching');"  id="button-teaching">
+                      <span class="icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                      </span>
+                      <span>Teaching</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu-teaching" role="menu">
+                    <div class="dropdown-content">
+                      <!-- <a class="dropdown-item" onclick="toggleDiv('teaching-item0', true);"  id="dd-teaching-item0">
+                        Teaching Statement
+                      </a>
+                      <hr class="dropdown-divider"> -->
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-item1', true);"  id="dd-teaching-item1">
+                        Dissecting the Nineteenth Century: Science in <br> Victorian Literature and Culture
+                      </a>
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-item2', true);"  id="dd-teaching-item2">
+                        Music, Gender, and Intersectional Social Change
+                      </a>
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-item3', true);"  id="dd-teaching-item3">
+                        Subversive Voices: Protest and Resistance in <br> Contemporary Global Fiction
+                      </a>
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-item4', true);"  id="dd-teaching-item4">
+                        <em>La vie Bohème</em>: Art and Counterculture from the <br> Latin Quarter to the Lower East Side
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-item5', true);"  id="dd-teaching-item5">
+                        Proposed Courses
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined " onclick="toggleDiv('publicWriting');" id="button-publicWriting">
+                  <span class="icon">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                  <span>Public Writing</span>
+                </a>
+              </span>
+              <!-- <span class="navbar-item">
+                <a class="button is-white is-outlined " onclick="toggleDiv('music');" id="button-contact">
+                  <span class="icon">
+                    <i class="fas fa-music"></i>
+                  </span>
+                  <span>Music</span>
+                </a>
+              </span> -->
+              <span class="navbar-item">
+                <a class="button is-white is-outlined " onclick="toggleDiv('contact');" id="button-contact">
+                  <span class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>Contact</span>
+                </a>
+              </span>
+
+            <!-- </div> -->
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body has-navbar-fixed-top">
+        <div class="container has-text-centered main-div">
+
+          <div class="column is-10 is-offset-1" id="home"  >
+            <h1 class="title">
+              Welcome
+            </h1>
+            <h2 class="subtitle" font-weight="bold">
+              Victorian literature &bull; music &bull; history of science &bull; gender and sexuality
+            </h2>
+          </div>
+
+          <div class="tile is-ancestor main-div" id="about" style="display: none;">
+              <div class="tile">
+                <div class="tile is-parent is-vertical is-3">
+                  <article class="tile is-child notification tile-transparent">
+                    <figure class="image" style="text-align: center;">
+                      <div class="circular-portrait" style="display: inline-block;">
+                        <img src="images/draucker.jpg" alt="Shannon Draucker">
+                      </div>
+                  </figure>
+
+                  <h1 class="title-pages">
+                    About Shannon
+                  </h1>
+
+                  </article>
+                </div>
+
+                <div class="tile is-parent">
+                  <article class="tile is-child notification tile-translucent">
+                    <p>
+                      <strong>Shannon Draucker</strong> is a Ph.D. Candidate in English Literature at Boston University (BU), where she has also earned a Graduate Certificate in Women's, Gender, and Sexuality Studies and is completing a Graduate Certificate in Teaching Writing. She received her M.A. in English from Boston University in 2014 and her B.A. in English and Music from Dartmouth College in 2013. Her research and teaching interests include Victorian literature and culture, music, the history of science, and gender, sexuality, and queer studies.
+                    </p>
+
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      Shannon's dissertation project, <strong><em>Sounding Bodies: Music and Physiology in Victorian Literature</em></strong>, explores literary responses to the science of sound in nineteenth-century Britain. As acoustical theorists like Hermann von Helmholtz and John Tyndall began to understand music as a material rather than ethereal entity – as a physical force that penetrates the human ear, causes the heart rate to rise, and activates the nerves and muscles – music became closely linked to bodily experience in the Victorian imagination. From Charles Dickens to Vernon Lee, Victorian writers began to use music to illustrate corporeal experiences of power, pleasure, desire, and intimacy and to imagine alternatives to female docility, companionate marriage, cross-sex desire, reproductive sexuality, and stable human subjectivity.
+                    </p>
+
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      Shannon's dissertation research has been supported by a Huntington Library Fellowship, two Boston University Graduate Research Abroad Fellowships, and the Midwest Victorian Studies Association's Walter L. Arnstein Prize for Dissertation Research (Honorable Mention). Portions of her dissertation have appeared in <em>Nineteenth-Century Gender Studies</em> and <em>BRANCH: Britain, Representation, and Nineteenth-Century History</em>. Shannon was also the 2017 winner of the Rosemary T. VanArsdel Prize from the Research Society for Victorian Periodicals. Her article, "'Vibrating through all its breadth:' Musical Fiction and Materialist Aesthetics in <em>The Strand Musical Magazine</em>," recently appeared in <em>Victorian Periodicals Review</em>. She has also published in <em>The Journal of Interactive Technology and Pedagogy</em> and <em>The Eudora Welty Review</em>.
+                    </p>
+
+                    <p>
+                      At BU, Shannon has independently designed and taught courses in three departments: English; Women's, Gender, and Sexuality Studies (WGS); and the BU Writing Program. She works as a Graduate Writing Consultant in BU's Writing Center and coordinates the English Department's Graduate Workshop Series. Outside of BU, Shannon is an ESL and writing teacher at Rosie's Place, a women's shelter and school in Boston. She is also a classically-trained clarinetist and remains an active musician, playing in Harvard's Dudley House Orchestra and in the Continuing Education Chamber Music Program at New England Conservatory.
+                    </p>
+
+                  </article>
+                </div>
+              </div>
+          </div>
+
+          <div class="tile" id="cv" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12" style="min-height: 8in;">
+              <article class="tile is-child notification tile-translucent">
+
+                <span id="cv-pdf-container"></span>
+                <!-- <p style="margin-bottom:1em;">
+                  <em>
+                    Selected publications and awards are listed here. For a full curriculum vitae, please see <a target="_blank" href="SBD-CV-Spring-2018.pdf">this PDF</a>.
+                  </em>
+                </p>
+                <h1 class="title-pages" style="text-align: center;">
+                  Publications
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                  <a target="_blank" href="http://www.ncgsjournal.com/issue141/draucker.htm">
+                    "Performing Power: Female Musicianship and Embodied Artistry in Bertha Thomas's The Violin-Player." <em>Nineteenth-Century Gender Studies 14:1</em> (Spring 2018).
+                  </a>
+                </p>
+
+                <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                  <a target="_blank" href="https://muse.jhu.edu/article/690222">
+                    "'Vibrating through all its breadth:' Musical Fiction and Materialist Aesthetics in the <em>Strand Musical Magazine</em>." <em>Victorian Periodicals Review</em> (Spring 2018), 1-17.
+                  </a>
+                  <br>
+                  <em>Winner of the 2017 Rosemary VanArsdel Essay Prize for the best graduate student essay investigating Victorian
+                  periodicals and newspapers</em>
+                </p>
+
+                <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                  "Alternative Corporealities in 'June Recital.'  Eudora Welty's Queering of Virgie Rainey and Miss Eckhart." Forthcoming in <em>Eudora Welty Review</em>, Vol. 10 (2018).
+                </p>
+
+                <p>
+                  "Hearing, Sensing, Feeling Sound: On Music and Physiology in Victorian England, 1857-1894." Forthcoming in <em>BRANCH: Britain, Representation, and Nineteenth-Century History</em> (Spring 2018).
+                </p>
+
+
+
+                <h1 class="title-pages" style="text-align: center; margin-top:1em; ">
+                  Awards
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <table style="width:100%">
+                  <tr>
+                    <td width="20%">Spring 2018</td>
+                    <td>Outstanding Teaching Fellow in the Department of English, Boston University Graduate School of Arts and Sciences </td>
+                  </tr>
+                  <tr>
+                    <td width="20%">Summer 2017</td>
+                    <td>Rosemary VanArsdel Prize, Research Society for Victorian Periodicals</td>
+                  </tr>
+                  <tr>
+                    <td>Spring 2017</td>
+                    <td>Huntington Library Research Fellowship, Huntington Library, San Marino, CA</td>
+                  </tr>
+                  <tr>
+                    <td>Spring 2017</td>
+                    <td>Honorable Mention, Walter L. Arnstein Prize for Dissertation Research in Victorian Studies, Midwest Victorian Studies Association</td>
+                  </tr>
+                  <tr>
+                    <td>Spring 2017</td>
+                    <td>Senior Teaching Fellowship, Boston University Women's, Gender, and Sexuality Studies Department </td>
+                  </tr>
+                </table> -->
+
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="research-item1" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;">
+                  <em>Sounding Bodies: Music and Physiology in Victorian Literature</em>
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <p>
+                  What happens to our bodies when we play or listen to music?  While twenty-first-century neuroscientists like Oliver Sacks and Daniel Levitin have recently investigated this question, I argue that we can find similar lines of inquiry in a more distant source: Victorian literature. <em>Sounding Bodies: Music and Physiology in Victorian Literature</em> explores literary responses to emerging nineteenth-century understandings of science, proposing that such understandings fundamentally transformed the ways Victorian writers talked about art and corporeality.
+                </p>
+                <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                  While eighteenth- and early-nineteenth-century thinkers often hailed music as a sublime, transcendent phenomenon, Victorian sound scientists like Hermann von Helmholtz and John Tyndall began to understand music as a material entity that produces energy, travels in waves, and causes vibrations – in both the particles of the air and the muscles and nerves of the human body. Music, they discovered, can make objects and bodies sweat, shake, quiver, convulse, and cry. In turn, Victorian writers from Charles Dickens to Vernon Lee began to link music and corporeality in their prose. While Romantic writers often depicted music metaphorically, as with Samuel Taylor Coleridge's "Aeolian Harp" analogizing the "intellectual breeze" of human receptivity, Victorian authors often portrayed it in more tangible terms.
+                </p>
+                <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                  <em>Sounding Bodies</em> demonstrates how music facilitated literary imaginations of corporeal experiences of gender and sexuality that are rarely visible in Victorian texts. Though often brief and fleeting – and at times even unrelated to the overall plot trajectories of the works in which they appear – scenes of music listening and performance reveal their authors' subversive engagements with female bodily agency, physical intimacy, sexual pleasure, homoerotic desire, temporal dislocation, and nonhuman subjectivity. When, for instance, a female violin player activates her strong arm muscles to perform, she displays and achieves a sense of physical power rarely available to her in a culture that deemed women incapable of such bodily invigoration.  When a male concertgoer experiences an orgasm in response to a male virtuoso's piano performance, he accesses a same-sex erotic encounter otherwise forbidden to him. When a tragic heroine relishes the "touch" of her fingers on her piano keys, she achieves a moment of physical consolation more profound than those she finds in her social world. Though often associated with the most highbrow and conservative of ideals, music in fact fostered some of the Victorian period's most subversive representations of embodied life.
+                </p>
+                <p>
+                  This project brings together a variety of authors across several genres (novels, short stories, and poems) to show how thoroughly the language of music physiology permeated Victorian literature. Chapter One examines novels by Mona Caird and Mary Augusta Ward in which acoustical science informs representations of female musicians as passionate and powerful producers of sound, in defiance of Victorian music critics who often dismissed female performers as dilettantes or amateurs incapable of musical careers. Chapter Two focuses on novels by Sarah Grand and Bertha Thomas in which female violinists do not perform <em>as</em> women, but rather dress as men in order to gain access to male-dominated musical spaces. I explore how this trope of the cross-dressing female violinist illuminates the relationships between gender performativity and the body. Chapter Three discusses anonymously-published pornographic works that draw explicit parallels between musical and erotic pleasure to cast both as natural bodily experiences – especially poignant in a culture that often deemed same-sex desire patently <em>un</em>natural. Chapter Four centers on ghost stories by John Meade Falkner and Vernon Lee in which music facilitates moments of erotic contact between ghosts and humans – "queer" because they not only depart from normative cross-sex desire, but also extend beyond the realm of the strictly human. Chapter Five continues this nonhuman thread by analyzing the intimate interactions between musicians and their instruments in works by Charles Dickens, Anthony Trollope, George Eliot, and Thomas Hardy, who depict instruments as quasi-living beings that possess their own subjectivities and can feel their players' touch.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="research-item2" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;">
+                  Articles
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/EWR.jpg" alt="Eudora Welty Review" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="https://muse.jhu.edu/article/700231/summary" target="_blank">
+                          "Alternative Corporealities in 'June Recital.'  Eudora Welty's Queering of Virgie Rainey and Miss Eckhart." <em>Eudora Welty Review</em> 10 (Spring 2018).
+                        </a>
+                      </strong>
+                    </p>
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      This essay presents a queer reading of Eudora Welty's 1947 short story "June Recital," a text in which Welty grants her female characters – namely, the piano teacher Miss Eckhart and her student Virgie Rainey – bodies that transgress normative formulations of gender, sex, selfhood, humanness, and ability.  It argues that "June Recital" reflects not simply Welty's feminist resistance to Southern patriarchal ideals of womanhood – confinement, docility, and respectability – but rather her more radical, queer imagining of bodies that resist identification or categorization altogether.  This essay proposes that Welty in many ways anticipated the queer turn in modernist studies, as she imagined the pleasures and powers of alternative modes of embodied existence.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/BRANCH.png" alt="BRANCH" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="http://www.branchcollective.org/?ps_articles=shannon-draucker-hearing-sensing-feeling-sound-on-music-and-physiology-in-victorian-england-1857-1894" target="_blank">
+                          "Hearing, Sensing, Feeling Sound: On Music and Physiology in Victorian England, 1857-1894." <em>BRANCH: Britain, Representation, and Nineteenth-Century History</em> (June 2018).
+                        </a>
+                      </strong>
+                    </p>
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      This article focuses on new developments in the burgeoning field of acoustical science that emerged in the mid-to-late nineteenth century. During this time, sound science began to flourish in England, particularly through lectures by Hermann von Helmholtz and John Tyndall at the Royal Institution.  The publications of Helmholtz's <em>On the Sensations of Tone as a Physiological Basis for the Theory of Music</em> (1863, trans. 1875) and John Tyndall's <em>Sound</em> (1867) also contributed to the transmission of acoustical theory mid-century. This entry traces the reception of these scientific ideas in musical, medical, educational, and literary circles in Victorian England. Focusing especially on new discoveries about sound's capacity to incite physiological sensations, this essay argues that acoustical science fundamentally transformed the ways that Victorians conceptualized the relations between aesthetics and the body.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/JITP.jpg" alt="The Journal of Interactive Technology and Pedagogy" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="https://jitp.commons.gc.cuny.edu/a-claim-in-140-characters-live-tweeting-in-the-composition-classroom/" target="_blank">
+                          "A Claim in 140 Characters: Live-Tweeting in the Composition Classroom." <em>The Journal of Interactive Technology and Pedagogy </em> (Spring 2018).
+                        </a>
+                      </strong>
+                    </p>
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      This article argues that by live-tweeting course texts and class presentations, first-year composition students develop fundamental writing skills including thesis formation, evidence incorporation, and peer review.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/NCGS.jpg" alt="Nineteenth-Century Gender Studies" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="http://www.ncgsjournal.com/issue141/draucker.htm" target="_blank">
+                          "Performing Power: Female Musicianship and Embodied Artistry in Bertha Thomas's <em>The Violin-Player</em>." <em>Nineteenth-Century Gender Studies </em> (Spring 2018): 14:1.
+                        </a>
+                      </strong>
+                    </p>
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      This article argues that Bertha Thomas's virtually unexamined novel <em>The Violin-Player</em> offers an alternative to literary conceptions of female performers as docile amateurs, self-important divas, domesticated performers, or failed professionals.  By drawing on contemporary understandings of music's ties to physiology, Thomas imagines a performer whose musicality is so tied to her physical life that it cannot be relinquished, denied, suppressed, or ignored; Laurence <em>must</em> play, and others must listen.  Laurence's embodied musicality grants her experiences of energy, vitality, and pleasure as well as the power to corporeally affect her listeners.  By associating female musicality with the realm of the physiological and the organic, Thomas levels a critique against Victorian thinkers who described women's musicianship as unnatural, unacceptable, or impossible.  Musicality, Thomas's novel suggests, exists apart from social codes, such as those based on gender, and is instead rooted in the brain, muscles, and nerves of the human body.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/VPR.jpg" alt="Victorian Periodicals Review" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="https://muse.jhu.edu/article/690222" target="_blank">
+                          "'Vibrating through all its breadth:' Musical Fiction and Materialist Aesthetics in the <em> Strand Musical Magazine. </em>" <em>Victorian Periodicals Review </em>51:1 (Spring 2018): 1-17.
+                        </a>
+                      </strong>
+                    </p>
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      The aims of <em>The Strand Musical Magazine (SMM)</em> were largely practical in nature; articles and advertisements provided information about concerts, festivals, and other events in Victorian musical life.  Yet, as this essay argues, the periodical also (perhaps unwittingly) participated in key nineteenth-century aesthetic and scientific debates about music's ties to the human body.  In several of the <em>SMM</em>'s short stories, characters cry, sweat, throb, convulse, quiver, and sweat while playing or hearing music.  These corporeal events correspond with emerging acoustical and physiological science that understood music in terms of sound waves and bodily vibrations.  The <em>SMM</em> foregrounded a conception of music not as an intangible, transcendent phenomenon but as a material force rooted in the science of sound.
+                    </p>
+                    <p>
+                      <em>
+                        Winner of the 2017 Rosemary VanArsdel Essay Prize for the best graduate student essay investigating Victorian periodicals and newspapers
+                      </em>
+                    </p>
+                  </div>
+                </div>
+
+                <h1 class="title-pages" style="text-align: center;">
+                  Book Reviews
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/Book Review Teaching Eudora Welty.jpg" alt="Eudora Welty and Productive Discomfort in the Classroom" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="https://muse.jhu.edu/article/700234" target="_blank">
+                          "Eudora Welty and Productive Discomfort in the Classroom." (Review of <em>Teaching the Works of Eudora Welty: Twenty-First Century Approaches </em>, eds. Mae Miller Claxton and Julia Eichelberger). <em> Eudora Welty Review </em>, Vol. 10 (Spring 2018). Solicited.
+                        </a>
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/Book Review Sound Knowledge.jpg" alt="Sound Knowledge: Music and Science in London, 1789-1851" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="https://www.cambridge.org/core/journals/nineteenth-century-music-review/article/james-q-davies-and-ellen-lockhart-eds-sound-knowledge-music-and-science-in-london-17891851-chicago-university-of-chicago-press-2017-vi-256-pp-4150/78819757B4AB48298D9A9BC7FD5974FA" target="_blank">
+                          Review of James Q. Davies and Ellen Lockhart, eds., <em>Sound Knowledge: Music and Science in London, 1789-1851</em>. <em>Nineteenth-Century Music Review </em> (2018), 1-3.
+                        </a>
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="columns is-vcentered">
+
+                  <div class="column has-text-centered is-2">
+                    <img src="images/articles/Book Review Outward Mind.jpg" alt="The Outward Mind: Materialist Aesthetics in Victorian Science and Literature" style="width:100px;border:0;">
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p>
+                      <strong>
+                        <a href="https://www.cambridge.org/core/journals/british-journal-for-the-history-of-science/article/benjamin-morgan-the-outward-mind-materialist-aesthetics-in-victorian-science-and-literature-chicago-and-london-the-university-of-chicago-press-2017-pp-373-isbn-9780226462202-3500-paperback/9BD4879C8E9124BDA0E43F5E186C8072" target="_blank">
+                          Review of Benjamin Morgan, <em>The Outward Mind: Materialist Aesthetics in Victorian Science and Literature. </em> <em>British Journal for the History of Science </em> 50:4 (2017), 734-5.
+                        </a>
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <!-- <div class="tile" id="teaching-item0" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                  Teaching Statement
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <p>
+                  What happens to our bodies when we play or listen to music?  While twenty-first-century neuroscientists like Oliver Sacks and Daniel Levitin have recently investigated this question, I argue that we can find similar lines of inquiry in a more distant source: Victorian literature. <em>Sounding Bodies: Music and Physiology in Victorian Literature</em> explores literary responses to emerging nineteenth-century understandings of science, proposing that such understandings fundamentally transformed the ways Victorian writers talked about art and corporeality.
+                </p>
+                <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                  While eighteenth- and early-nineteenth-century thinkers often hailed music as a sublime, transcendent phenomenon, Victorian sound scientists like Hermann von Helmholtz and John Tyndall began to understand music as a material entity that produces energy, travels in waves, and causes vibrations – in both the particles of the air and the muscles and nerves of the human body. Music, they discovered, can make objects and bodies sweat, shake, quiver, convulse, and cry. In turn, Victorian writers from Charles Dickens to Vernon Lee began to link music and corporeality in their prose. While Romantic writers often depicted music metaphorically, as with Samuel Taylor Coleridge's "Aeolian Harp" analogizing the "intellectual breeze" of human receptivity, Victorian authors often portrayed it in more tangible terms.
+                </p>
+
+
+              </article>
+            </div>
+          </div> -->
+
+          <div class="tile" id="teaching-item1" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                  Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
+                </h1>
+                <h1 class="subtitle-pages" style="text-align: center;">
+                    Boston University Writing Program
+                </h1>
+                <h1 class="subsubtitle-pages" style="text-align: center;">
+                    WR 150: Writing, Research & Inquiry &bull; Spring 2019
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns">
+
+                  <div class="column has-text-centered is-2">
+                    <a class="button is-fullwidth is-dark is-outlined teachingButton" href="files/teaching/syllabi/WR 150 S19 Syllabus Draucker.pdf" target="_blank" onclick="this.blur();">Syllabus</a>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p style="margin-bottom:0.5em;">
+                      Much of what we now think of as “science” – its practices, its disciplines, and even the term “scientist” itself (coined in 1833 by the British polymath William Whewell) – can be traced back to Victorian England (1837-1901).  With the shift from an agricultural to an industrial economy came a growing urban population and an almost unprecedented need for rapid advancements in technology, medicine, and mathematics.  As the middle classes gained more time for intellectual pursuits and educational reforms created a new population of readers, science found eager and curious audiences, who attended lectures, read periodicals, and visited museums.  The explosion and consolidation of new fields of study – from anatomy and biology, to geology and astronomy, to optics and acoustics – resulted largely from the Victorians’ desires to confront their changing world and better understand their place in it.
+                    </p>
+                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                      These new scientific developments incited delight, anxiety, and confusion.  At the same time that brain scientists hailed the unique complexities of the human mind, evolutionary theorists discovered humans’ kinship to microscopic bugs and cells.  At the same time that the new profession of the “doctor” emerged to heal the body, anatomists dissected corpses and severed limbs.  At the same time that technologies of sight and sound were helping humans to see and hear, environmental scientists realized that industrial pollution and urban noise were ruinous to the senses.
+                    </p>
+                    <p>
+                      In this course, we explore Victorian literary responses to this burgeoning scientific world.  While we now often think of science and literature as disparate fields, these two disciplines were closely linked in the nineteenth century.  Victorian writers found in science exciting new ideas and images to incorporate into their fiction and poetry.  By the same token, scientists seeking to reach a wide, public audience used literary techniques (metaphors, images, analogies) to enhance the appeal and readability of their work.  How did Victorian writers absorb, question, critique, or reject the new discoveries that pervaded their world?  What did science explain that literature could not – and vice-versa?  What might the Victorians tell us about the relationship between the humanities and the sciences – and the possibilities afforded by their intersection – today?
+
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="teaching-item2" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                  Music, Gender, and Intersectional Social Change
+                </h1>
+                <h1 class="subtitle-pages" style="text-align: center;">
+                    Boston University Women’s, Gender, and Sexuality Studies Program
+                </h1>
+                <h1 class="subsubtitle-pages" style="text-align: center;">
+                    WS 305: Topics in Women’s, Gender, and Sexuality Studies &bull; Fall 2017
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns">
+
+                  <div class="column has-text-centered is-2">
+                    <a class="button is-fullwidth is-dark is-outlined" style="margin-bottom:1em;" href="files/teaching/syllabi/WS 305 F17 Syllabus Draucker.pdf" target="_blank" onclick="this.blur();">Syllabus</a>
+                    <a class="button is-fullwidth is-dark is-outlined" style="margin-bottom:1em; height: auto !important;" href='files/teaching/assignments/"All Songs Considered" Podcast.pdf' target="_blank" onclick="this.blur();">Podcast<br>Assignment</a>
+                    <a class="button is-fullwidth is-dark is-outlined" style="margin-bottom:1em;" href="files/teaching/assignments/Active Listening.pdf" target="_blank" onclick="this.blur();">Active Listening</a>
+                    <a class="button is-fullwidth is-dark is-outlined" href="http://ws305c1fall2017.com" target="_blank" onclick="this.blur();">Course Website</a>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p  style="margin-bottom:0.5em;">
+                      From nineteenth-century Verdian opera, to Helen Reddy’s 1971 feminist anthem “I Am Woman,” to Beyoncé’s 2016 sensation “Formation,” music has long fueled movements for social change. In this course, we explore how humans have mobilized sound and song to foster explorations of gender, sexuality, race, and class. We study a variety of musical genres, including classical, jazz, blues, soul, funk, folk, rock, punk, pop, hip-hop, and rap. Our course “texts” include audio recordings, song lyrics, music videos, stories and films about musicians, and readings about music’s historical connections to social and political projects. No prior expertise or knowledge of music is required.
+                    </p>
+                    <p>
+                      We investigate some of the following questions: how does music differ or depart from other artistic media – i.e. literature, theatre, dance – in its radical potential? Is there something about music itself that makes it uniquely revolutionary? What gives music the potential for subversion – is it the music itself, the lyrics, the sounds, the performers, or something more intangible? Students also consider musical contexts with more complex or vexed relationships to progressive politics – the paucity of female conductors in the classical music world, the sexist lyrics that pervade a variety of genres, and the forms of cultural appropriation displayed in music videos and performances. We also examine instances in which songs not explicitly intended for protest are mobilized as vehicles for social change (“Over the Rainbow” as a gay anthem, for instance).
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="teaching-item3" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                  Subversive Voices: Protest and Resistance in Contemporary Global Fiction
+                </h1>
+                <h1 class="subtitle-pages" style="text-align: center;">
+                    Boston University English Department
+                </h1>
+                <h1 class="subsubtitle-pages" style="text-align: center;">
+                    EN 121: Readings in World Literature &bull; Spring 2017
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns">
+
+                  <div class="column has-text-centered is-2">
+                    <a class="button is-fullwidth is-dark is-outlined" style="margin-bottom:1em;" href="files/teaching/syllabi/EN 121 S17 Syllabus Draucker.pdf" target="_blank" onclick="this.blur();">Syllabus</a>
+                    <a class="button is-fullwidth is-dark is-outlined" style="height: auto !important;" href="files/teaching/assignments/World Literature Paper Assignment.pdf" target="_blank" onclick="this.blur();">Paper<br>Assignment</a>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p >
+                      This course focuses on works of contemporary fiction by Caribbean, South American, East Asian, South Asian, African, and Middle Eastern writers. We explore narratives that interrogate normative gender codes (of both femininity and masculinity), forces of colonialism and imperialism, environmental racism, and other forms of marginalization and oppression. Topics of discussion include authors’ literary imaginations of various strategies of protest and modes of resistance – even those located in unexpected places. We interrogate the word “subversion” itself and attend to characters who deploy alternative modes of passive resistance or choose not to resist at all.
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="teaching-item4" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                  <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
+                </h1>
+                <h1 class="subtitle-pages" style="text-align: center;">
+                    Boston University Writing Program
+                </h1>
+                <h1 class="subsubtitle-pages" style="text-align: center;">
+                    WR 100: First-Year Writing Seminar &bull; Fall 2016
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns">
+
+                  <div class="column has-text-centered is-2">
+                    <a class="button is-fullwidth is-dark is-outlined" style="margin-bottom:1em;" href="files/teaching/syllabi/WR100 F16 Syllabus Draucker.pdf" target="_blank" onclick="this.blur();">Syllabus</a>
+                    <a class="button is-fullwidth is-dark is-outlined" style="height: auto !important;" href="files/teaching/assignments/Paper 1 Crafting an Academic Argument.pdf" target="_blank" onclick="this.blur();">Paper<br>Assignment</a>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <p  style="margin-bottom:0.5em;">
+                      From the cafés of nineteenth-century Paris to the streets of twenty-first- century Williamsburg, bohemianism has long represented a countercultural movement, an aesthetic fantasy, and an unconventional lifestyle based on “art for art’s sake,” elective poverty, and artistic community. In this course, we trace bohemianism’s origins in <em>fin-de-siècle</em> France to its modern-day iterations in hipster culture. We explore questions such as: when, where, how, and why do bohemian communities emerge? What dominant cultures do bohemian artists and thinkers resist? Are bohemians always quite as countercultural as we (or they) might think? Are they even countercultural at all? Who gets to take part in “la vie bohème,” and who gets left out?
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="teaching-item5" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;">
+                  Proposed Courses
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns">
+                  <div class="column has-text-centered">
+                    <a class="button is-fullwidth is-dark is-outlined" href="files/teaching/syllabi/Musical Victorians Syllabus.pdf" target="_blank">Musical Victorians: The Social Life of Sound in Nineteenth-Century British Literature</a>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <a class="button is-fullwidth is-dark is-outlined" href="files/teaching/syllabi/Victorian Bestsellers Syllabus.pdf" target="_blank">Forgotten Victorian Bestsellers</a>
+                  </div>
+
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="publicWriting" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center;">
+                  Public Writing
+                  <hr style="border-color: grey;">
+                </h1>
+                <div class="columns">
+                  <div class="column has-text-centered">
+                    <a target="_blank" href="http://jvc.oup.com/2017/12/18/shannon-draucker-the-man-who-invented-christmas-dickens-and-the-literary-marketplace/">
+                      <img src="images/publicWriting/christmas.jpg" alt="The Man Who Invented Christmas" style="height:200px;border:0;">
+                    </a>
+                    <p>"The Man Who Invented Christmas: Dickens and the Literary Marketplace." Journal of Victorian Culture Online (18 December 2017).</p>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <a target="_blank" href="http://jvc.oup.com/2017/03/05/shannon-draucker-the-queen-goes-to-the-opera/">
+                      <img src="images/publicWriting/opera.jpg" alt="Victorian" style="height:200px;border:0;">
+                    </a>
+                    <p>"The Queen Goes to the Opera." Journal of Victorian Culture Online (5 March 2017).</p>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <a target="_blank" href="http://www.streakybacon.net/curtis-sittenfelds-eligible">
+                      <img src="images/publicWriting/Eligible.png" alt="Curtis Sittenfeld's Eligible" style="height:200px;border:0;">
+                    </a>
+                    <p>"Curtis Sittenfeld's Eligible: Mary Bennet and the Difficulties of Narrating Spinsterhood." Streaky Bacon: A Guide to Victorian Adaptation (22 June 2016).</p>
+                  </div>
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+          <div class="tile" id="contact" style="display: none;">
+            <div class="tile is-parent is-vertical  is-12">
+              <article class="tile is-child notification tile-translucent">
+                <h1 class="title-pages" style="text-align: center; ">
+                  Please get in touch!
+                  <hr style="border-color: grey;">
+                </h1>
+
+                <div class="columns is-vcentered">
+                  <div class="column">
+                    <!-- <p class="contact-header" style="text-align: center;">
+                      Email
+                    </p> -->
+                    <p style="text-align: center;">
+                      <a href="mailto:sdraucke@bu.edu">
+                        sdraucke[at]bu.edu
+                      </a>
+                    </p>
+                  </div>
+                  <div class="column">
+                    <!-- <p class="contact-header" style="text-align: center;">
+                      Mailing Address
+                    </p> -->
+                    <p style="text-align: center;">
+                      Shannon Draucker
+                    </p>
+                    <p style="text-align: center;">
+                      Boston University Department of English
+                    </p>
+                    <p style="text-align: center;">
+                      236 Bay State Road #341
+                    </p>
+                    <p style="text-align: center;">
+                      Boston, MA 02215
+                    </p>
+                  </div>
+
+                  <div class="column">
+                    <p style="text-align: center;">
+                    <span class="icon" style="font-size: 16px;">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                      @<a  href="https://twitter.com/sdraucker" target="_blank" > sdraucker </a>
+                    </p>
+                  </div>
+
+                </div>
+
+              </article>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <footer class="card-footer">
+        <p class="card-footer-item" style="justify-content: flex-start;">
+          <span>
+            Copyright &copy; 2018, Shannon Draucker. All rights reserved. Last updated August 29, 2018.
+          </span>
+        </p>
+        <p class="card-footer-item" style="justify-content: flex-end;">
+          <!-- <span class="icon">
+            <i class="fa fa-twitter-square"></i>
+          </span> -->
+          <span class="footerIconParent">
+
+            <a href="mailto:sdraucke@bu.edu">
+              <span class="icon" style="font-size: 16px; padding-right: 0.5em;">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </a>
+
+            <a href="https://twitter.com/sdraucker" target="_blank" >
+              <span class="icon" style="font-size: 16px;">
+                <i class="fab fa-twitter"></i>
+              </span>
+            </a>
+          </span>
+        </p>
+      </footer>
+
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/pdfobject.min.js"></script>
+    <script>
+      PDFObject.embed("files/Draucker_CV_8.29.18.pdf", '#cv-pdf-container');
+    </script>
+
+    <script async type="text/javascript" src="js/bulma.js"></script>
+
+
+  </body>
+
+  </html>

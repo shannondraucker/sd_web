@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Sabon";
+    src: url("fonts/sabon-regular.ttf");
+}
+@font-face {
+    font-family: "Sabon";
+    src: url("fonts/sabon-bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Sabon";
+    src: url("fonts/sabon-italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Sabon";
+    src: url("fonts/sabon-bolditalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
