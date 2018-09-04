@@ -18,3 +18,7 @@
     font-weight: bold;
     font-style: italic;
 }
+@font-face {
+    font-family: "Garamond";
+    src: url("fonts/garamond.ttf");
+}
