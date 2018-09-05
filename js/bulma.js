@@ -60,7 +60,7 @@ function toggleDiv(to, dropdownItem){
   }
 }
 
-function dropdownNav(to){
+function dropdownNav(to, event){
 
   if ($("#"+to+"_dropdown").hasClass("is-active")) {
     $('#button-'+to).blur();
@@ -69,7 +69,12 @@ function dropdownNav(to){
     $(".dropdown").removeClass("is-active");
     $("#"+to+"_dropdown").addClass("is-active");
   }
-  event.stopPropagation();
+  if (event.stopPropagation){
+       event.stopPropagation();
+   }
+   else if(window.event){
+      window.event.cancelBubble=true;
+   }
 }
 
 $(document).click(function() {
