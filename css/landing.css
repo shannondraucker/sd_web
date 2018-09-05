@@ -121,6 +121,10 @@ html,body {
     text-align: center;
   }
 
+  .dropdown-menu {
+    text-align: left;
+  }
+
 }
 
 hr {

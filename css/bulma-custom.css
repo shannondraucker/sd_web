@@ -6774,7 +6774,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   .navbar.is-fixed-top .navbar-menu, .navbar.is-fixed-top-touch .navbar-menu {
     -webkit-overflow-scrolling: touch;
     max-height: calc(100vh - 3.25rem);
-    overflow: auto;
+    /* overflow: auto; */
   }
   html.has-navbar-fixed-top-touch,
   body.has-navbar-fixed-top-touch {
