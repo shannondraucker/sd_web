@@ -18,10 +18,10 @@ $(document).ready(function(){
   $(window).scroll(function() {
     // checks if window is scrolled more than 500px, adds/removes solid class
     if($(this).scrollTop() > 30) {
-      console.log("attaching");
+
         $('.navbar').addClass('solid');
     } else {
-      console.log("removing");
+
         $('.navbar').removeClass('solid');
     }
   });
@@ -33,7 +33,7 @@ function toggleDiv(to, dropdownItem){
   if (to.trim() !== activeDiv.trim()){
     $('#'+activeDiv).hide();
     $('#'+to).fadeIn(1200);
-console.log(activeDiv);
+
     $('#button-'+activeDiv).removeClass('is-focused');
     $(".dropdown").removeClass("is-active");
 
