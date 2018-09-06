@@ -8769,6 +8769,7 @@ label.panel-block:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
 }
 
 .hero .navbar {
