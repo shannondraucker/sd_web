@@ -8769,7 +8769,7 @@ label.panel-block:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: expression( this.scrollHeight < "101vh" ? "100vh" : "auto" );
+  _height: "100vh";
 }
 
 .hero .navbar {
