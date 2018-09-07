@@ -8769,7 +8769,7 @@ label.panel-block:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  _height: "100vh";
+  height: "100vh";
 }
 
 .hero .navbar {
@@ -9654,6 +9654,7 @@ label.panel-block:hover {
   flex-grow: 1;
   flex-shrink: 0;
   padding: 6.5rem 1.5rem;
+  flex: 1 0 auto;
 }
 
 .section {
