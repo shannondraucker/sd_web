@@ -58,6 +58,9 @@ function toggleDiv(to, dropdownItem){
     $("#button-"+toParent).focus();
     $(".dropdown").removeClass("is-active");
   }
+
+  /* send google analytics virtual pageView */
+  ga('send', 'pageview', '/'+to+'/');
 }
 
 function dropdownNav(to, event){
