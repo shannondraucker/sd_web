@@ -9692,3 +9692,8 @@ label.panel-heading {
 #panel-3:checked ~ .panel > .body-3 {
   display: flex;
 }
+
+.dummywrapper {
+  display: flex;
+  flex-direction: column;
+}
