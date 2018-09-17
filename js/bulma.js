@@ -2,7 +2,7 @@ var activeDiv = 'home';
 var teaching_dd_active = false;
 var research_dd_active = false;
 
-var backgroundImages = ['DSC_0069.jpg', 'IMG_4216.jpg', 'Photo Jul 22, 12 05 38 PM.jpg', 'IMG_4193.jpg', 'Photo Jul 16, 7 43 04 PM.jpg'];
+var backgroundImages = ['DSC_0069.jpg', 'IMG_4216.jpg', 'Photo Jul 22, 12 05 38 PM.jpg', 'Photo Jul 16, 7 43 04 PM.jpg'];
 
 $(document).ready(function(){
   var backgroundImages_selected = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
