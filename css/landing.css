@@ -184,3 +184,8 @@ hr {
   color: #363636 !important;
   box-shadow:none !important;
 }
+
+.format-ul {
+  list-style: inside;
+  text-align: left;
+}
