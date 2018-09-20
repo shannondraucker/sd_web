@@ -188,4 +188,5 @@ hr {
 .format-ul {
   list-style: inside;
   text-align: left;
+  margin-left: 0.5em;
 }
