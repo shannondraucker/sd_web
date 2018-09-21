@@ -9,6 +9,8 @@
   <title>Shannon Draucker</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/plyr.css">
+  <link rel="stylesheet" href="css/mediaplayer.css">
   <!-- Bulma Version 0.7.1-->
   <link rel="stylesheet" type="text/css" href="css/bulma-custom.css" >
   <link rel="stylesheet" type="text/css" href="css/landing.css">
@@ -143,14 +145,14 @@
                   <span>Public Writing</span>
                 </a>
               </span>
-              <!-- <span class="navbar-item">
+              <span class="navbar-item">
                 <a class="button is-white is-outlined " onclick="toggleDiv('music');" id="button-contact">
                   <span class="icon">
                     <i class="fas fa-music"></i>
                   </span>
                   <span>Music</span>
                 </a>
-              </span> -->
+              </span>
               <span class="navbar-item">
                 <a class="button is-white is-outlined " onclick="toggleDiv('contact');" id="button-contact">
                   <span class="icon">
@@ -667,6 +669,71 @@
             </div>
           </div>
 
+          <div class="tile" id="music" style="display: none;">
+              <!-- <div class="tile"> -->
+              <div class="tile is-parent is-4">
+                <article class="tile is-child notification tile-translucent">
+                  <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                    Music
+                    <hr style="border-color: grey;">
+                  </h1>
+
+                  <p  style="margin-top:0.5em; margin-bottom:0.5em;">
+                    My literary scholarship and my musical training have long been mutually reinforcing pursuits.  As a classical clarinetist, I am especially attuned to moments in literature that capture the pleasures and pains of performance, the corporeal labor of practice, the vulnerability of being on stage, and the gratification of playing with others.
+                  </p>
+                  <p>
+                    You can view my music resumé <a target="_blank" href="files/music/MUSIC RESUME 2018.pdf">here</a> and listen to some of my recordings (solo and orchestral) to the right.
+                  </p>
+
+
+                </article>
+              </div>
+                <div class="tile is-parent is-8">
+                  <article class="tile is-child notification tile-translucent is-12">
+
+                    <div id="mainwrap">
+
+                        <div id="audiowrap">
+                          <div>
+                            <div >
+                              <span id="artwork-container">
+                                  <img id="artwork" src="" alt="" width="19%;">
+                              </span>
+                              <span  id = "player-container" style="width:80%; display:inline-block;">
+                                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                                  Now Playing
+                                </h1>
+
+                                <h1 id="npTitle" class="subtitle-pages" style="text-align: center;">
+                                </h1>
+
+                                <!-- <hr style="border-color: grey;"> -->
+                            <span id="audio0">
+                                <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                            </span>
+
+                            <div id="tracks">
+                                <a id="btnPrev">&larr;</a><a id="btnNext">&rarr;</a>
+                            </div>
+                            
+                          </span>
+                          </div>
+
+                          </div>
+                          <div id="plwrap">
+                              <ul id="plList"></ul>
+                          </div>
+                      </div>
+                    </div>
+
+
+                  </article>
+                </div>
+
+
+              <!-- </div> -->
+          </div>
+
           <div class="tile" id="contact" style="display: none;">
             <div class="tile is-parent is-12">
               <article class="tile is-child notification tile-translucent">
@@ -761,7 +828,11 @@
       PDFObject.embed("files/SBD CV 9.17.18.pdf", '#cv-pdf-container');
     </script>
 
+    <script src="js/plyr.polyfilled.min.js"></script>
+
+
     <script async type="text/javascript" src="js/bulma.js"></script>
+    <script src="js/mediaplayer.js"></script>
 
 
   </body>
