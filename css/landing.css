@@ -116,6 +116,12 @@ html,body {
   text-align: center;
 }
 
+.subsubsubtitle-pages {
+  font-weight: 250;
+  font-size: 1em;
+  text-align: center;
+}
+
 @media screen and (max-width: 935px) {
   .navbar-item {
     text-align: center;
