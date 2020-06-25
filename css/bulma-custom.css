@@ -9699,5 +9699,5 @@ label.panel-heading {
 }
 
 .white {
-  color: white;
+  color: white !important;
 }
