@@ -9697,7 +9697,3 @@ label.panel-heading {
   display: flex;
   flex-direction: column;
 }
-
-.white {
-  color: white !important;
-}
