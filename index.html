@@ -139,30 +139,23 @@
               </span>
 
               <span class="navbar-item">
-                <div class="dropdown" id="public_dropdown">
-                  <div class="dropdown-trigger">
-                    <button class="button is-white is-outlined " onclick="dropdownNav('public', event);"  id="button-publicWriting">
-                      <span class="icon">
-                        <i class="fas fa-rss"></i>
-                      </span>
-                      <span>Publicity</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu-public" role="menu">
-                    <div class="dropdown-content">
-                      <a class="dropdown-item" onclick="toggleDiv('publicWriting', true);"  id="dd-teaching-item0">
-                        Public Writing
-                      </a>
-                      <a class="dropdown-item" onclick="toggleDiv('mentions', true);"  id="dd-teaching-item1">
-                        Mentions
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <a class="button is-white is-outlined " onclick="toggleDiv('publicWriting');" id="button-publicWriting">
+                  <span class="icon">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                  <span>Public Writing</span>
+                </a>
               </span>
+
+              <span class="navbar-item">
+                <a class="button is-white is-outlined " onclick="toggleDiv('mentions');" id="button-mentions">
+                  <span class="icon">
+                    <i class="fas fa-rss"></i>
+                  </span>
+                  <span>Mentions</span>
+                </a>
+              </span>
+
 
               <span class="navbar-item">
                 <a class="button is-white is-outlined " onclick="toggleDiv('music');" id="button-music">
@@ -172,14 +165,14 @@
                   <span>Music</span>
                 </a>
               </span>
-              <span class="navbar-item">
+              <!-- <span class="navbar-item">
                 <a class="button is-white is-outlined " onclick="toggleDiv('contact');" id="button-contact">
                   <span class="icon">
                     <i class="fas fa-envelope"></i>
                   </span>
                   <span>Contact</span>
                 </a>
-              </span>
+              </span> -->
 
             <!-- </div> -->
           </div>
@@ -215,6 +208,13 @@
                   <h1 class="subsubsubtitle-pages">
                     [prounouns: she/her/hers]
                   </h1>
+
+                  <a class="button is-white is-outlined " onclick="toggleDiv('contact');" id="button-contact" style="margin-top: 2em;">
+                    <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Contact</span>
+                  </a>
 
                   </article>
                 </div>
@@ -923,7 +923,7 @@
           </span> -->
           <span class="footerIconParent">
 
-            <a href="mailto:sdraucker@siena.edu">
+            <a onclick="toggleDiv('contact');">
               <span class="icon" style="font-size: 16px; padding-right: 0.5em;">
                 <i class="fas fa-envelope"></i>
               </span>
