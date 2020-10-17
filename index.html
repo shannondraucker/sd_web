@@ -117,22 +117,12 @@
                         Teaching Aims
                       </a>
                       <hr class="dropdown-divider">
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item1', true);"  id="dd-teaching-item1">
-                        Dissecting the Nineteenth Century: Science in <br> Victorian Literature and Culture
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-siena', true);"  id="dd-teaching-siena">
+                        Siena College
                       </a>
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item2', true);"  id="dd-teaching-item2">
-                        Music, Gender, and Intersectional Social Change
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-bu', true);"  id="dd-teaching-bu">
+                        Boston University
                       </a>
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item3', true);"  id="dd-teaching-item3">
-                        Subversive Voices: Protest and Resistance in <br> Contemporary Global Fiction
-                      </a>
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item4', true);"  id="dd-teaching-item4">
-                        <em>La vie Bohème</em>: Art and Counterculture from the <br> Latin Quarter to the Lower East Side
-                      </a>
-                      <!-- <hr class="dropdown-divider">
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item5', true);"  id="dd-teaching-item5">
-                        Proposed Courses
-                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -515,37 +505,183 @@
             </div>
           </div>
 
-          <div class="tile" id="teaching-item1" style="display: none;">
+          <div class="tile teaching" id="teaching-bu" style="display: none;">
+
             <div class="tile is-parent is-12">
               <article class="tile is-child notification tile-translucent">
                 <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University Writing Program
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    WR 150: Writing, Research & Inquiry &bull; Spring 2019
-                  <hr style="border-color: grey;">
+                  Teaching at Boston University
                 </h1>
 
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker FINAL Syllabus WR 150.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/ELEVATOR SPEECHES.pdf" target="_blank">Elevator Speeches</a>
+                <div class="dropdown" id="teaching-bu_dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button is-white is-outlined " onclick="dropdownNav('teaching-bu', event);"  id="button-teaching-siena" style="padding-left: 3em; padding-right: 3em; background-color: #f9f9f9;">
+                      <span class="subsubtitle-pages">Choose a course</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
                   </div>
+                  <div class="dropdown-menu" id="dropdown-menu-teaching-siena" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item1');"  id="dd-teaching-bu-item1">
+                        Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item2');"  id="dd-teaching-bu-item2">
+                        Music, Gender, and Intersectional Social Change
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item3');"  id="dd-teaching-bu-item3">
+                          Subversive Voices: Protest and Resistance in Contemporary Global Fiction
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item4');"  id="dd-teaching-bu-item4">
+                        <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-                  <div class="column has-text-centered">
-                    <p style="margin-bottom:0.5em;">
-                      Much of what we now think of as “science” &mdash; its practices, its disciplines, and even the term “scientist” itself (coined in 1833 by the British polymath William Whewell) &mdash; can be traced back to Victorian England (1837-1901). With the shift from an agricultural to an industrial economy came a growing urban population and an almost unprecedented need for rapid advancements in technology, medicine, and mathematics. As the middle classes gained more time for intellectual pursuits and educational reforms created a new population of readers, science found eager and curious audiences who attended lectures, read periodicals, and visited museums. The explosion and consolidation of new fields of study &mdash; from anatomy and biology, to geology and astronomy, to optics and acoustics &mdash; resulted largely from the Victorians’ desires to confront their changing world and better understand their place in it.
-                    </p>
-                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
-                      These new scientific developments incited delight, anxiety, and confusion. At the same time that brain scientists hailed the unique complexities of the human mind, evolutionary theorists discovered humans’ kinship to microscopic bugs and cells. At the same time that the new profession of the “doctor” emerged to heal the body, anatomists dissected corpses and severed limbs. At the same time that technologies of sight and sound were helping humans to see and hear, environmental scientists realized that industrial pollution and urban noise were ruinous to the senses.
-                    </p>
-                    <p>
-                      In this course, we explore Victorian literary responses to this burgeoning scientific world. While we now often think of science and literature as disparate fields, these two disciplines were closely linked in the nineteenth century. Victorian writers found in science exciting new ideas and images to incorporate into their fiction and poetry. By the same token, scientists seeking to reach a wide, public audience used literary techniques (metaphors, images, analogies) to enhance the appeal and readability of their work. How did Victorian writers absorb, question, critique, or reject the new discoveries that pervaded their world? What did science explain that literature could not &mdash; and vice-versa? What might the Victorians tell us about the relationship between the humanities and the sciences &mdash; and the possibilities afforded by their intersection &mdash; today?
-                    </p>
+                <hr style="border-color: grey; margin-top: 1em;">
+
+                <div class="tile subdiv" id="teaching-bu-item1" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University Writing Program
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          WR 150: Writing, Research & Inquiry &bull; Spring 2019
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker FINAL Syllabus WR 150.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/ELEVATOR SPEECHES.pdf" target="_blank">Elevator Speeches</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p style="margin-bottom:0.5em;">
+                            Much of what we now think of as “science” &mdash; its practices, its disciplines, and even the term “scientist” itself (coined in 1833 by the British polymath William Whewell) &mdash; can be traced back to Victorian England (1837-1901). With the shift from an agricultural to an industrial economy came a growing urban population and an almost unprecedented need for rapid advancements in technology, medicine, and mathematics. As the middle classes gained more time for intellectual pursuits and educational reforms created a new population of readers, science found eager and curious audiences who attended lectures, read periodicals, and visited museums. The explosion and consolidation of new fields of study &mdash; from anatomy and biology, to geology and astronomy, to optics and acoustics &mdash; resulted largely from the Victorians’ desires to confront their changing world and better understand their place in it.
+                          </p>
+                          <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                            These new scientific developments incited delight, anxiety, and confusion. At the same time that brain scientists hailed the unique complexities of the human mind, evolutionary theorists discovered humans’ kinship to microscopic bugs and cells. At the same time that the new profession of the “doctor” emerged to heal the body, anatomists dissected corpses and severed limbs. At the same time that technologies of sight and sound were helping humans to see and hear, environmental scientists realized that industrial pollution and urban noise were ruinous to the senses.
+                          </p>
+                          <p>
+                            In this course, we explore Victorian literary responses to this burgeoning scientific world. While we now often think of science and literature as disparate fields, these two disciplines were closely linked in the nineteenth century. Victorian writers found in science exciting new ideas and images to incorporate into their fiction and poetry. By the same token, scientists seeking to reach a wide, public audience used literary techniques (metaphors, images, analogies) to enhance the appeal and readability of their work. How did Victorian writers absorb, question, critique, or reject the new discoveries that pervaded their world? What did science explain that literature could not &mdash; and vice-versa? What might the Victorians tell us about the relationship between the humanities and the sciences &mdash; and the possibilities afforded by their intersection &mdash; today?
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-bu-item2" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Music, Gender, and Intersectional Social Change
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University Women’s, Gender, and Sexuality Studies Program
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          WS 305: Topics in Women’s, Gender, and Sexuality Studies &bull; Fall 2017
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WS 305 F17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href='files/teaching/assignments/"All Songs Considered" Podcast.pdf' target="_blank">Podcast Assignment</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/Active Listening.pdf" target="_blank">Active Listening</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="http://ws305c1fall2017.com" target="_blank">Course Website</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Electric Ladies Will You Sleep.pdf" target="_blank">Published Student Work</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p  style="margin-bottom:0.5em;">
+                            From nineteenth-century Verdian opera, to Helen Reddy’s 1971 feminist anthem “I Am Woman,” to Beyoncé’s 2016 sensation “Formation,” music has long fueled movements for social change. In this course, we explore how humans have mobilized sound and song to foster explorations of gender, sexuality, race, and class. We study a variety of musical genres, including classical, jazz, blues, soul, funk, folk, rock, punk, pop, hip-hop, and rap. Our course “texts” include audio recordings, song lyrics, music videos, stories and films about musicians, and readings about music’s historical connections to social and political projects. No prior expertise or knowledge of music is required.
+                          </p>
+                          <p>
+                            We investigate some of the following questions: how does music differ or depart from other artistic media &mdash; i.e. literature, theatre, dance &mdash; in its radical potential? Is there something about music itself that makes it uniquely revolutionary? What gives music the potential for subversion &mdash; is it the music itself, the lyrics, the sounds, the performers, or something more intangible? Students also consider musical contexts with more complex or vexed relationships to progressive politics &mdash; the paucity of female conductors in the classical music world, the sexist lyrics that pervade a variety of genres, and the forms of cultural appropriation displayed in music videos and performances. We also examine instances in which songs not explicitly intended for protest are mobilized as vehicles for social change (“Over the Rainbow” as a gay anthem, for instance).
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-bu-item3" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Subversive Voices: Protest and Resistance in Contemporary Global Fiction
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University English Department
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          EN 121: Readings in World Literature &bull; Spring 2017
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/EN 121 S17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/World Literature Paper Assignment.pdf" target="_blank">Paper Assignment</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Final Exam EN121.pdf" target="_blank">Final Exam</a>
+
+
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p >
+                            This course focuses on works of contemporary fiction by Caribbean, South American, East Asian, South Asian, African, and Middle Eastern writers. We explore narratives that interrogate normative gender codes (of both femininity and masculinity), forces of colonialism and imperialism, environmental racism, and other forms of marginalization and oppression. Topics of discussion include authors’ literary imaginations of various strategies of protest and modes of resistance &mdash; even those located in unexpected places. We interrogate the word “subversion” itself and attend to characters who deploy alternative modes of passive resistance or choose not to resist at all.
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-bu-item4" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University Writing Program
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          WR 100: First-Year Writing Seminar &bull; Fall 2016
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WR100 F16 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Paper 1 Crafting an Academic Argument.pdf" target="_blank">Paper Assignment</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p  style="margin-bottom:0.5em;">
+                            From the cafés of nineteenth-century Paris to the streets of twenty-first- century Williamsburg, bohemianism has long represented a countercultural movement, an aesthetic fantasy, and an unconventional lifestyle based on “art for art’s sake,” elective poverty, and artistic community. In this course, we trace bohemianism’s origins in <em>fin-de-siècle</em> France to its modern-day iterations in hipster culture. We explore questions such as: when, where, how, and why do bohemian communities emerge? What dominant cultures do bohemian artists and thinkers resist? Are bohemians always quite as countercultural as we (or they) might think? Are they even countercultural at all? Who gets to take part in “la vie bohème,” and who gets left out?
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
                   </div>
                 </div>
 
@@ -553,110 +689,46 @@
             </div>
           </div>
 
-          <div class="tile" id="teaching-item2" style="display: none;">
+
+
+          <div class="tile teaching" id="teaching-siena" style="display: none;">
+
             <div class="tile is-parent is-12">
               <article class="tile is-child notification tile-translucent">
                 <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  Music, Gender, and Intersectional Social Change
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University Women’s, Gender, and Sexuality Studies Program
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    WS 305: Topics in Women’s, Gender, and Sexuality Studies &bull; Fall 2017
-                  <hr style="border-color: grey;">
+                  Teaching at Siena College
                 </h1>
 
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WS 305 F17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href='files/teaching/assignments/"All Songs Considered" Podcast.pdf' target="_blank">Podcast Assignment</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/Active Listening.pdf" target="_blank">Active Listening</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="http://ws305c1fall2017.com" target="_blank">Course Website</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Electric Ladies Will You Sleep.pdf" target="_blank">Published Student Work</a>
+                <div class="dropdown" id="teaching-siena_dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button is-white is-outlined " onclick="dropdownNav('teaching-siena', event);"  id="button-teaching-siena">
+                      <span class="subsubtitle-pages">Choose a course</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
                   </div>
-
-                  <div class="column has-text-centered">
-                    <p  style="margin-bottom:0.5em;">
-                      From nineteenth-century Verdian opera, to Helen Reddy’s 1971 feminist anthem “I Am Woman,” to Beyoncé’s 2016 sensation “Formation,” music has long fueled movements for social change. In this course, we explore how humans have mobilized sound and song to foster explorations of gender, sexuality, race, and class. We study a variety of musical genres, including classical, jazz, blues, soul, funk, folk, rock, punk, pop, hip-hop, and rap. Our course “texts” include audio recordings, song lyrics, music videos, stories and films about musicians, and readings about music’s historical connections to social and political projects. No prior expertise or knowledge of music is required.
-                    </p>
-                    <p>
-                      We investigate some of the following questions: how does music differ or depart from other artistic media &mdash; i.e. literature, theatre, dance &mdash; in its radical potential? Is there something about music itself that makes it uniquely revolutionary? What gives music the potential for subversion &mdash; is it the music itself, the lyrics, the sounds, the performers, or something more intangible? Students also consider musical contexts with more complex or vexed relationships to progressive politics &mdash; the paucity of female conductors in the classical music world, the sexist lyrics that pervade a variety of genres, and the forms of cultural appropriation displayed in music videos and performances. We also examine instances in which songs not explicitly intended for protest are mobilized as vehicles for social change (“Over the Rainbow” as a gay anthem, for instance).
-                    </p>
+                  <div class="dropdown-menu" id="dropdown-menu-teaching-siena" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item1', true);"  id="dd-teaching-siena-item1">
+                        Book Project
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item2', true);"  id="dd-teaching-siena-item2">
+                        Articles & Book Reviews
+                      </a>
+                    </div>
                   </div>
                 </div>
+
+                <hr style="border-color: grey; margin-top: 1em;">
+
+
 
               </article>
             </div>
           </div>
 
-          <div class="tile" id="teaching-item3" style="display: none;">
-            <div class="tile is-parent is-12">
-              <article class="tile is-child notification tile-translucent">
-                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  Subversive Voices: Protest and Resistance in Contemporary Global Fiction
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University English Department
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    EN 121: Readings in World Literature &bull; Spring 2017
-                  <hr style="border-color: grey;">
-                </h1>
 
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/EN 121 S17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/World Literature Paper Assignment.pdf" target="_blank">Paper Assignment</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Final Exam EN121.pdf" target="_blank">Final Exam</a>
-
-
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <p >
-                      This course focuses on works of contemporary fiction by Caribbean, South American, East Asian, South Asian, African, and Middle Eastern writers. We explore narratives that interrogate normative gender codes (of both femininity and masculinity), forces of colonialism and imperialism, environmental racism, and other forms of marginalization and oppression. Topics of discussion include authors’ literary imaginations of various strategies of protest and modes of resistance &mdash; even those located in unexpected places. We interrogate the word “subversion” itself and attend to characters who deploy alternative modes of passive resistance or choose not to resist at all.
-                    </p>
-                  </div>
-                </div>
-
-              </article>
-            </div>
-          </div>
-
-          <div class="tile" id="teaching-item4" style="display: none;">
-            <div class="tile is-parent is-12">
-              <article class="tile is-child notification tile-translucent">
-                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University Writing Program
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    WR 100: First-Year Writing Seminar &bull; Fall 2016
-                  <hr style="border-color: grey;">
-                </h1>
-
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WR100 F16 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Paper 1 Crafting an Academic Argument.pdf" target="_blank">Paper Assignment</a>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <p  style="margin-bottom:0.5em;">
-                      From the cafés of nineteenth-century Paris to the streets of twenty-first- century Williamsburg, bohemianism has long represented a countercultural movement, an aesthetic fantasy, and an unconventional lifestyle based on “art for art’s sake,” elective poverty, and artistic community. In this course, we trace bohemianism’s origins in <em>fin-de-siècle</em> France to its modern-day iterations in hipster culture. We explore questions such as: when, where, how, and why do bohemian communities emerge? What dominant cultures do bohemian artists and thinkers resist? Are bohemians always quite as countercultural as we (or they) might think? Are they even countercultural at all? Who gets to take part in “la vie bohème,” and who gets left out?
-                    </p>
-                  </div>
-                </div>
-
-              </article>
-            </div>
-          </div>
 
           <!-- <div class="tile" id="teaching-item5" style="display: none;">
             <div class="tile is-parent is-vertical is-12">
