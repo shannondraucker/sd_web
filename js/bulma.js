@@ -32,6 +32,7 @@ $(document).ready(function(){
 function toggleDiv(to, dropdownItem){
   if (to.trim() !== activeDiv.trim()){
     $('#'+activeDiv).hide();
+    $('.teaching').hide();
     $('#'+to).fadeIn(1200);
 
     $('#button-'+activeDiv).removeClass('is-focused');
@@ -57,6 +58,27 @@ function toggleDiv(to, dropdownItem){
     var toParent = to.substr(0, to.indexOf('-'));
     $("#button-"+toParent).focus();
     $(".dropdown").removeClass("is-active");
+  }
+
+  /* send google analytics virtual pageView */
+  ga('send', 'pageview', '/'+to+'/');
+}
+
+function toggleSubDiv(to, dropdownItem){
+  if (to.trim() !== activeDiv.trim()){
+    $('.subdiv').hide();
+    $('#'+to).fadeIn(1200);
+
+    $('#button-'+activeDiv).removeClass('is-focused');
+    $(".dropdown").removeClass("is-active");
+
+
+    $('#button-'+to).addClass('is-focused');
+
+    $(".dropdown-item").removeClass("is-active");
+
+    activeDiv = to;
+
   }
 
   /* send google analytics virtual pageView */
@@ -123,4 +145,13 @@ window.addEventListener('resize', function(event){
     //   $("#button-contact").removeClass("button");
     //
     // }
+});
+
+$(".dropdown-normal .button").click(function (){
+  console.log("hihi")
+    var dropdown = $(this).parents('.dropdown-normal');
+    dropdown.toggleClass('is-active');
+    dropdown.focusout(function() {
+        $(this).removeClass('is-active');
+    });
 });
