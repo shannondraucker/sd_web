@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/plyr.css">
   <link rel="stylesheet" href="css/mediaplayer.css">
+  <link rel="stylesheet" href="css/blockquote.css">
   <!-- Bulma Version 0.7.1-->
   <link rel="stylesheet" type="text/css" href="css/bulma-custom.css" >
   <link rel="stylesheet" type="text/css" href="css/landing.css">
@@ -117,22 +118,12 @@
                         Teaching Aims
                       </a>
                       <hr class="dropdown-divider">
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item1', true);"  id="dd-teaching-item1">
-                        Dissecting the Nineteenth Century: Science in <br> Victorian Literature and Culture
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-siena', true);"  id="dd-teaching-siena">
+                        Siena College
                       </a>
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item2', true);"  id="dd-teaching-item2">
-                        Music, Gender, and Intersectional Social Change
+                      <a class="dropdown-item" onclick="toggleDiv('teaching-bu', true);"  id="dd-teaching-bu">
+                        Boston University
                       </a>
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item3', true);"  id="dd-teaching-item3">
-                        Subversive Voices: Protest and Resistance in <br> Contemporary Global Fiction
-                      </a>
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item4', true);"  id="dd-teaching-item4">
-                        <em>La vie Bohème</em>: Art and Counterculture from the <br> Latin Quarter to the Lower East Side
-                      </a>
-                      <!-- <hr class="dropdown-divider">
-                      <a class="dropdown-item" onclick="toggleDiv('teaching-item5', true);"  id="dd-teaching-item5">
-                        Proposed Courses
-                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -536,37 +527,180 @@
             </div>
           </div>
 
-          <div class="tile" id="teaching-item1" style="display: none;">
+          <div class="tile teaching" id="teaching-bu" style="display: none;">
+
             <div class="tile is-parent is-12">
               <article class="tile is-child notification tile-translucent">
                 <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University Writing Program
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    WR 150: Writing, Research & Inquiry &bull; Spring 2019
-                  <hr style="border-color: grey;">
+                  Teaching at Boston University
                 </h1>
 
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker FINAL Syllabus WR 150.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/ELEVATOR SPEECHES.pdf" target="_blank">Elevator Speeches</a>
+                <div class="dropdown" id="teaching-bu_dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button is-white is-outlined " onclick="dropdownNav('teaching-bu', event);"  id="button-teaching-siena" style="padding-left: 3em; padding-right: 3em; background-color: #f9f9f9;">
+                      <span class="subsubtitle-pages">Choose a course</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
                   </div>
+                  <div class="dropdown-menu" id="dropdown-menu-teaching-siena" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item1');"  id="dd-teaching-bu-item1">
+                        Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item2');"  id="dd-teaching-bu-item2">
+                        Music, Gender, and Intersectional Social Change
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item3');"  id="dd-teaching-bu-item3">
+                          Subversive Voices: Protest and Resistance in Contemporary Global Fiction
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-bu-item4');"  id="dd-teaching-bu-item4">
+                        <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-                  <div class="column has-text-centered">
-                    <p style="margin-bottom:0.5em;">
-                      Much of what we now think of as “science” &mdash; its practices, its disciplines, and even the term “scientist” itself (coined in 1833 by the British polymath William Whewell) &mdash; can be traced back to Victorian England (1837-1901). With the shift from an agricultural to an industrial economy came a growing urban population and an almost unprecedented need for rapid advancements in technology, medicine, and mathematics. As the middle classes gained more time for intellectual pursuits and educational reforms created a new population of readers, science found eager and curious audiences who attended lectures, read periodicals, and visited museums. The explosion and consolidation of new fields of study &mdash; from anatomy and biology, to geology and astronomy, to optics and acoustics &mdash; resulted largely from the Victorians’ desires to confront their changing world and better understand their place in it.
-                    </p>
-                    <p style="margin-top:0.5em; margin-bottom:0.5em;">
-                      These new scientific developments incited delight, anxiety, and confusion. At the same time that brain scientists hailed the unique complexities of the human mind, evolutionary theorists discovered humans’ kinship to microscopic bugs and cells. At the same time that the new profession of the “doctor” emerged to heal the body, anatomists dissected corpses and severed limbs. At the same time that technologies of sight and sound were helping humans to see and hear, environmental scientists realized that industrial pollution and urban noise were ruinous to the senses.
-                    </p>
-                    <p>
-                      In this course, we explore Victorian literary responses to this burgeoning scientific world. While we now often think of science and literature as disparate fields, these two disciplines were closely linked in the nineteenth century. Victorian writers found in science exciting new ideas and images to incorporate into their fiction and poetry. By the same token, scientists seeking to reach a wide, public audience used literary techniques (metaphors, images, analogies) to enhance the appeal and readability of their work. How did Victorian writers absorb, question, critique, or reject the new discoveries that pervaded their world? What did science explain that literature could not &mdash; and vice-versa? What might the Victorians tell us about the relationship between the humanities and the sciences &mdash; and the possibilities afforded by their intersection &mdash; today?
-                    </p>
+                <hr style="border-color: grey; margin-top: 1em;">
+
+                <div class="tile subdiv" id="teaching-bu-item1" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Dissecting the Nineteenth Century: Science in Victorian Literature and Culture
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University Writing Program
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          WR 150: Writing, Research & Inquiry &bull; Spring 2019
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker FINAL Syllabus WR 150.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/ELEVATOR SPEECHES.pdf" target="_blank">Elevator Speeches</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p style="margin-bottom:0.5em;">
+                            Much of what we now think of as “science” &mdash; its practices, its disciplines, and even the term “scientist” itself (coined in 1833 by the British polymath William Whewell) &mdash; can be traced back to Victorian England (1837-1901). With the shift from an agricultural to an industrial economy came a growing urban population and an almost unprecedented need for rapid advancements in technology, medicine, and mathematics. As the middle classes gained more time for intellectual pursuits and educational reforms created a new population of readers, science found eager and curious audiences who attended lectures, read periodicals, and visited museums. The explosion and consolidation of new fields of study &mdash; from anatomy and biology, to geology and astronomy, to optics and acoustics &mdash; resulted largely from the Victorians’ desires to confront their changing world and better understand their place in it.
+                          </p>
+                          <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                            These new scientific developments incited delight, anxiety, and confusion. At the same time that brain scientists hailed the unique complexities of the human mind, evolutionary theorists discovered humans’ kinship to microscopic bugs and cells. At the same time that the new profession of the “doctor” emerged to heal the body, anatomists dissected corpses and severed limbs. At the same time that technologies of sight and sound were helping humans to see and hear, environmental scientists realized that industrial pollution and urban noise were ruinous to the senses.
+                          </p>
+                          <p>
+                            In this course, we explore Victorian literary responses to this burgeoning scientific world. While we now often think of science and literature as disparate fields, these two disciplines were closely linked in the nineteenth century. Victorian writers found in science exciting new ideas and images to incorporate into their fiction and poetry. By the same token, scientists seeking to reach a wide, public audience used literary techniques (metaphors, images, analogies) to enhance the appeal and readability of their work. How did Victorian writers absorb, question, critique, or reject the new discoveries that pervaded their world? What did science explain that literature could not &mdash; and vice-versa? What might the Victorians tell us about the relationship between the humanities and the sciences &mdash; and the possibilities afforded by their intersection &mdash; today?
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-bu-item2" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Music, Gender, and Intersectional Social Change
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University Women’s, Gender, and Sexuality Studies Program
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          WS 305: Topics in Women’s, Gender, and Sexuality Studies &bull; Fall 2017
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WS 305 F17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href='files/teaching/assignments/"All Songs Considered" Podcast.pdf' target="_blank">Podcast Assignment</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/Active Listening.pdf" target="_blank">Active Listening</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="http://ws305c1fall2017.com" target="_blank">Course Website</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Electric Ladies Will You Sleep.pdf" target="_blank">Published Student Work</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p  style="margin-bottom:0.5em;">
+                            From nineteenth-century Verdian opera, to Helen Reddy’s 1971 feminist anthem “I Am Woman,” to Beyoncé’s 2016 sensation “Formation,” music has long fueled movements for social change. In this course, we explore how humans have mobilized sound and song to foster explorations of gender, sexuality, race, and class. We study a variety of musical genres, including classical, jazz, blues, soul, funk, folk, rock, punk, pop, hip-hop, and rap. Our course “texts” include audio recordings, song lyrics, music videos, stories and films about musicians, and readings about music’s historical connections to social and political projects. No prior expertise or knowledge of music is required.
+                          </p>
+                          <p>
+                            We investigate some of the following questions: how does music differ or depart from other artistic media &mdash; i.e. literature, theatre, dance &mdash; in its radical potential? Is there something about music itself that makes it uniquely revolutionary? What gives music the potential for subversion &mdash; is it the music itself, the lyrics, the sounds, the performers, or something more intangible? Students also consider musical contexts with more complex or vexed relationships to progressive politics &mdash; the paucity of female conductors in the classical music world, the sexist lyrics that pervade a variety of genres, and the forms of cultural appropriation displayed in music videos and performances. We also examine instances in which songs not explicitly intended for protest are mobilized as vehicles for social change (“Over the Rainbow” as a gay anthem, for instance).
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-bu-item3" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Subversive Voices: Protest and Resistance in Contemporary Global Fiction
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University English Department
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          EN 121: Readings in World Literature &bull; Spring 2017
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/EN 121 Spring 2017 Draucker.pdf" target="_blank">Syllabus</a>
+
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p >
+                            This course focuses on works of contemporary fiction by Caribbean, South American, East Asian, South Asian, African, and Middle Eastern writers. We explore narratives that interrogate normative gender codes (of both femininity and masculinity), forces of colonialism and imperialism, environmental racism, and other forms of marginalization and oppression. Topics of discussion include authors’ literary imaginations of various strategies of protest and modes of resistance &mdash; even those located in unexpected places. We interrogate the word “subversion” itself and attend to characters who deploy alternative modes of passive resistance or choose not to resist at all.
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-bu-item4" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Boston University Writing Program
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          WR 100: First-Year Writing Seminar &bull; Fall 2016
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WR 100 F8 Fall 2016 Draucker PDF.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="https://jitp.commons.gc.cuny.edu/a-claim-in-140-characters-live-tweeting-in-the-composition-classroom/" target="_blank">Live-Tweeting Course Texts</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p  style="margin-bottom:0.5em;">
+                            From the cafés of nineteenth-century Paris to the streets of twenty-first- century Williamsburg, bohemianism has long represented a countercultural movement, an aesthetic fantasy, and an unconventional lifestyle based on “art for art’s sake,” elective poverty, and artistic community. In this course, we trace bohemianism’s origins in <em>fin-de-siècle</em> France to its modern-day iterations in hipster culture. We explore questions such as: when, where, how, and why do bohemian communities emerge? What dominant cultures do bohemian artists and thinkers resist? Are bohemians always quite as countercultural as we (or they) might think? Are they even countercultural at all? Who gets to take part in “la vie bohème,” and who gets left out?
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
                   </div>
                 </div>
 
@@ -574,133 +708,339 @@
             </div>
           </div>
 
-          <div class="tile" id="teaching-item2" style="display: none;">
+          <div class="tile teaching" id="teaching-siena" style="display: none;">
+
             <div class="tile is-parent is-12">
               <article class="tile is-child notification tile-translucent">
                 <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  Music, Gender, and Intersectional Social Change
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University Women’s, Gender, and Sexuality Studies Program
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    WS 305: Topics in Women’s, Gender, and Sexuality Studies &bull; Fall 2017
-                  <hr style="border-color: grey;">
+                  Teaching at Siena College
                 </h1>
 
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WS 305 F17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href='files/teaching/assignments/"All Songs Considered" Podcast.pdf' target="_blank">Podcast Assignment</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/Active Listening.pdf" target="_blank">Active Listening</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="http://ws305c1fall2017.com" target="_blank">Course Website</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Electric Ladies Will You Sleep.pdf" target="_blank">Published Student Work</a>
+                <div class="dropdown" id="teaching-siena_dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button is-white is-outlined " onclick="dropdownNav('teaching-siena', event);"  id="button-teaching-siena" style="padding-left: 3em; padding-right: 3em; background-color: #f9f9f9;">
+                      <span class="subsubtitle-pages">Choose a course</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
                   </div>
-
-                  <div class="column has-text-centered">
-                    <p  style="margin-bottom:0.5em;">
-                      From nineteenth-century Verdian opera, to Helen Reddy’s 1971 feminist anthem “I Am Woman,” to Beyoncé’s 2016 sensation “Formation,” music has long fueled movements for social change. In this course, we explore how humans have mobilized sound and song to foster explorations of gender, sexuality, race, and class. We study a variety of musical genres, including classical, jazz, blues, soul, funk, folk, rock, punk, pop, hip-hop, and rap. Our course “texts” include audio recordings, song lyrics, music videos, stories and films about musicians, and readings about music’s historical connections to social and political projects. No prior expertise or knowledge of music is required.
-                    </p>
-                    <p>
-                      We investigate some of the following questions: how does music differ or depart from other artistic media &mdash; i.e. literature, theatre, dance &mdash; in its radical potential? Is there something about music itself that makes it uniquely revolutionary? What gives music the potential for subversion &mdash; is it the music itself, the lyrics, the sounds, the performers, or something more intangible? Students also consider musical contexts with more complex or vexed relationships to progressive politics &mdash; the paucity of female conductors in the classical music world, the sexist lyrics that pervade a variety of genres, and the forms of cultural appropriation displayed in music videos and performances. We also examine instances in which songs not explicitly intended for protest are mobilized as vehicles for social change (“Over the Rainbow” as a gay anthem, for instance).
-                    </p>
+                  <div class="dropdown-menu" id="dropdown-menu-teaching-siena" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item1');"  id="dd-teaching-siena-item1">
+                        Sexuality in Literature
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item2');"  id="dd-teaching-siena-item2">
+                        The Novel
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item3');"  id="dd-teaching-siena-item3">
+                          Introduction to Literature
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item4');"  id="dd-teaching-siena-item4">
+                        Women in Literature
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item5');"  id="dd-teaching-siena-item5">
+                        Representing HIV/AIDS in Literature and Pop Culture
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item6');"  id="dd-teaching-siena-item6">
+                        Victorian Literature
+                      </a>
+                      <a class="dropdown-item" onclick="toggleSubDiv('teaching-siena-item7');"  id="dd-teaching-siena-item7">
+                        Narratives of Sexual Violence
+                      </a>
+                    </div>
                   </div>
                 </div>
+
+                <hr style="border-color: grey; margin-top: 1em;">
+
+                <div class="tile subdiv" id="teaching-siena-item1" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        Sexuality in Literature
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 215 &bull; Fall 2019, Fall 2020
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Sexuality in Literature Fall 2020 Syllabus.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/ENGL 215 Critical Toolkit.pdf" target="_blank">Critical Toolkit</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p>
+                          How do writers write the erotic? How do literary works from a variety of genres capture experiences and sensations that are often private, taboo, or even illegal? What techniques and strategies do authors use to describe moments of desire, pleasure, arousal, and stimulation? What language is used to depict sexual experiences that are traumatic, painful, or violent? How do writers negotiate the slippages between sexual identities, acts, preferences, and performances? What can literary works tell us about the history of gender and sexuality across cultures and time periods?
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-siena-item2" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                        The Novel
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 256:07 &bull; Fall 2019, Fall 2020 (Honors)
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker Novel F19.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/ENGL 256 GE reading journal and reflection essay.pdf" target="_blank"><p><em>Great Expectations</em> Reading Journal and Reflection Essay</p></a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/ENGL 256 Goodreads blurb for Woman of Colour.pdf" target="_blank"><p><em>Goodreads</em> Blurb for <em>The Woman of Colour</em></p></a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p>
+                          In this class, we explore the novel from a range of historical, formal, thematic, and cultural perspectives. From Daniel Defoe’s adventure tale <em>Robinson Crusoe</em> (1719) to Marjane Satrapi’s graphic memoir <em>Persepolis</em> (2000), our course texts engage with one of the novel’s central preoccupations throughout time: the "coming-of-age" plot. In addition to exploring various engagements with this theme, we trace scholarly debates about the origins of the novel, read some of the earliest "novels," explore the novel's formal transformations throughout time, and read novels in a variety of formats (as serialized texts, as triple-decker stacks, and as audiobooks). We also consider the novel as a type of media &mdash; a technological invention and mode of communication. Some of our motivating questions might include: what makes a novel a novel? What stories make for good novels? Why is the "coming-of-age" plot so common? Why are some novels gripping "page-turners" and others painstaking slogs? How and why have people read novels throughout time, and how and why do we read them today?
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-siena-item3" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                          Introduction to Literature
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 101 &bull; Fall 2019
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker Intro to Lit F19.pdf" target="_blank">Syllabus</a>
+
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p>
+                          In this class, we study the formal, thematic, historical, cultural, and theoretical aspects of literary works. We read texts from a variety of genres, cultures, and time periods and encounter a range of diverse perspectives. This course is subtitled "Critical Voices." The word "critical" has several connotations. Most obviously, the writers we read are <em>important</em> figures in literary history due to their formal innovations, historical influence, or societal impact. Many of the writers on our syllabus are also "critical" in the sense that they advanced powerful <em>critiques</em> of their worlds, using literature as a medium to speak out against various forms of injustice. Finally, this course invites you to develop your <em>own</em> critical voices as you share your important ideas and enter scholarly conversations about literature. We will work together to help you build the thinking, reading, writing, revising, and communication skills you will use throughout college and the rest of your lives.
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-siena-item4" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                          Women in Literature
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 210 &bull; Spring 2020
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker 210 Women in Literature Syllabus.pdf" target="_blank">Syllabus</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+
+                        <div class="columns">
+                          <div class="column is-1" style="text-align: right;">
+                            <span class="icon fa-3x">
+                              <i class="fas fa-quote-left" aria-hidden="true" style="color: #7e7e7e;"></i>
+                            </span>
+                          </div>
+                          <div class="column">
+                            <em>
+                                  It was in this world of woman speech, loud talk, angry words, women with tongues quick and sharp, tender sweet tongues, touching our world with their words, that I made speech my birthright &mdash; and the right to voice, to authorship, a privilege I would not be denied. It was in that world and because of it that I came to dream of writing, to write.
+                            </em>
+                            <p style="margin-top: 0.3em;">
+                              &mdash; bell hooks, <em>Talking Back: Thinking Feminist, Thinking Black</em> (1989), p. 6
+                            </p>
+                          </div>
+                        </div>
+
+
+                          <p style="margin-bottom:0.5em;">
+                            In this course, we explore texts by female, trans, and non-binary writers who "touc[h] our world with their words." We explore works from a variety of genres by authors from a range of time periods, geographic locations, and literary traditions. Our focus is on texts whose authors dissent against various forms of injustice in their worlds, including sexism, classism, racism, xenophobia, homophobia, imperialism, colonialism, and transphobia.
+                          </p>
+
+                          <p>
+                            We also ponder questions such as: what is "women’s writing?" Is "women’s writing" necessarily <em>feminist</em> writing? How do writers seek to capture "women’s experiences," if at all? How do these texts explore the intersections of gender with other vectors of identity, such as race, class, and sexuality? How might we put pressure on concepts of "womanhood" altogether? 
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-siena-item5" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                          Representing HIV/AIDS in Literature and Pop Culture
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 384:9E &bull; Spring 2020
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker 384 AIDS Syllabus .pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="https://www.siena.edu/news/story/studying-one-pandemic-while-living-another/" target="_blank"><p>Course Feature in <em>the SCoop</em></p></a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/Damien Center Interview and Reflection.pdf" target="_blank">Damien Center Interview and Reflection</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/AIDS Final Project.pdf" target="_blank">Final Project: Art and Literature in the Time of Pandemic</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p style="margin-bottom:0.5em;">
+                          On June 5, 1981, the U.S. Centers for Disease Control and Prevention released its Morbidity and Mortality Weekly Report, which detailed the rare occurrence of Pneumocystis pneumonia (PCP) in otherwise healthy, young, "homosexual" men in Los Angeles. On July 3, 1981, <em>The New York Times</em> declared a "Rare Cancer Seen in 41 Homosexuals." However, infections caused by HIV and AIDS had been steadily increasing in the states as well as in Central Africa, Haiti, Canada, and Europe for almost a decade before these reports. AIDS activists sharply criticized the mainstream media, the federal government, and the medical community for their belated acknowledgment of and slow response to the disease.
+                          </p>
+
+                          <p style="margin-top:0.5em; margin-bottom:0.5em;">
+                          While the lack of engagement with HIV/AIDS by the media, government, and medical world would long be (and still is) a common theme in discourses about the pandemic, HIV/AIDS immediately captured the passions of artists, poet, playwrights, novelists, filmmakers, and musicians. In this course, we explore representations of HIV/AIDS in literature and pop culture from the last 40 years. From Larry Kramer’s 1985 play <em>The Normal Heart</em>, which related some of the earliest activist efforts by the Gay Men’s Health Crisis in New York, to Danez Smith’s 2017 poetry collection <em>Don’t Call Us Dead</em>, which explores what it means to be black, queer, and HIV-positive in America today, the works we read allow us to consider HIV/AIDS from a variety of intersectional perspectives. We explore the linguistic, visual, and sonic tools that artists use to portray an illness that few understand and many stigmatize, consider how creators respond to threats from outside of&mdash;and fissures within&mdash;activist movements, and discuss the difficulties&mdash;and perhaps impossibilities&mdash;of fully "representing" an enduring global pandemic.
+                          </p>
+
+                          <p>
+                          While we read some "canonical" works of AIDS literature (<em>The Normal Heart</em>, Tony Kushner’s <em>Angels in America</em>, Susan Sontag’s <em>AIDS and Its Metaphors</em>), we also use an intersectional lens to discuss representations of HIV/AIDS outside the spheres of white, middle- or upper-class gay men in U.S. contexts. We read works by female, trans, and non-binary writers of color from across the globe, including Sapphire’s <em>Push</em>, Jamaica Kincaid’s <em>My Brother</em>, Yan Lianke’s <em>Dreams of Ding Village</em>, and Masande Ntshanga’s <em>The Reactive</em>. We also consider the "here and now" of HIV/AIDS as they affect people in our own community; a major component of our course includes work with Albany’s Damien Center, supported by Siena’s Center for Academic and Community Engagement (ACE). 
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-siena-item6" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                          Victorian Literature
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 325 &bull; Spring 2020
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Draucker 325 Victorian Literature Syllabus.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="https://www.sutori.com/story/the-victorian-era-1837-1901--uTTpqKTyoyb1Xp4N4XVya98k" target="_blank">Collaborative Digital Timeline</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Crystal Palace Siena Edition.pdf" target="_blank">Crystal Palace Siena Edition</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+
+                        <div class="columns">
+                          <div class="column is-1" style="text-align: right;">
+                            <span class="icon fa-3x">
+                              <i class="fas fa-quote-left" aria-hidden="true" style="color: #7e7e7e;"></i>
+                            </span>
+                          </div>
+                          <div class="column">
+                            <em>
+                            [O]ur interest in the period is motivated by certain features of our own moment. In finance, resource mining, globalization, imperialism, liberalism, and many other vectors, we are Victorian, inhabiting, advancing, and resisting the world they made. The aesthetic forms the Victorians pioneered and perfected continue to dominate popular and avant-garde cultural production. The conceptual problems, political quandaries, and theoretical issues they broached remain pressing and contentious.
+                            </em>
+                            <p style="margin-top: 0.3em;">
+                              &mdash; "Manifesto of the V21 Collective", (2015)
+                            </p>
+                          </div>
+                        </div>
+
+
+                          <p style="margin-bottom:0.5em;">
+                          The phrase "Victorian England" often conjures images of agonizingly long novels, dowdy monarchs, and prudish moral codes. While these associations are certainly valid (and we will certainly encounter all of them!), this semester, we will aim to think much more capaciously about the Victorian Period. After all, the years of Queen Victoria’s reign (1837&ndash;1901) witnessed some of the most exciting, salacious, terrifying, and troubling events in British and global history &mdash; from the invention of photography to the development of the railway system, from the Great Exhibition (1851) to the publication of Karl Marx’s Communist Manifesto (1848) and Charles Darwin’s <em>Origin of Species</em> (1859), from a burgeoning periodical press to a thriving underground pornography industry. Reading "Victorian literature" means reading Charles Dickens, Charlotte Bront&euml;, and Thomas Hardy, yes, but it also means reading works by those on the margins of (and often marginalized <em>by</em>) Victorian society and the Victorian literary canon, including writers who published anonymously due to their class, race, gender, or sexuality (the authors of <em>The Woman of Colour</em> and <em>Teleny</em>, for instance); writers from British colonies who protested Britain’s rule over them (such as Mary Prince and Pandita Ramabai Sarasvati); and writers from the twentieth and twenty-first centuries who "write back" to critique long-held assumptions about the period (including contemporary feminist, postcolonial, and critical race theorists).
+                          </p>
+
+                          <p>
+                            We explore this tumultuous time period through the lenses of gender, class, empire, race, and sexuality&mdash;discourses that were shifting profoundly during the nineteenth century (and of course remain especially urgent today). As Britain expanded its capitalist economy, colonized almost a quarter of the world, and instituted new laws about labor, marriage, disease, and intimacy, writers from a variety of genres, locations, and traditions found vital material for their literary works. One of our major goals, therefore, is to think critically about the relationships between literature and history &mdash; to explore not only <em>what</em> the Victorians read, but also <em>how</em> they read and what they experienced. We also discuss urgent debates in the scholarly field of Victorian Studies, including those raised by the "V21 Collective" ("Victorian Studies for the 21st Century"), a group of academics who urge us not to simply "exhaustively describe, preserve, and display the past" but to understand how "our interest in the period is motivated by certain features of our own moment" (<a target="_blank", href="http://v21collective.org/manifesto-of-the-v21-collective-ten-theses/">"Manifesto of the V21 Collective"</a>).
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+                <div class="tile subdiv" id="teaching-siena-item7" style="display: none;">
+                  <div class="tile is-parent is-12">
+                    <article class="tile is-child notification tile-translucent">
+                      <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
+                          Narratives of Sexual Violence
+                      </h1>
+                      <h1 class="subtitle-pages" style="text-align: center;">
+                          Siena College Department of English
+                      </h1>
+                      <h1 class="subsubtitle-pages" style="text-align: center;">
+                          ENGL 384:09 &bull; Fall 2020
+                        <hr style="border-color: grey;">
+                      </h1>
+
+                      <div class="columns">
+
+                        <div class="column has-text-centered is-2">
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/Narratives of Sexual Violence Syllabus.pdf" target="_blank">Syllabus</a>
+                          <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/MeToo News Article Analysis Narratives.pdf" target="_blank">#MeToo News Article Analysis</a>
+                        </div>
+
+                        <div class="column has-text-centered">
+                          <p>
+                          In this class, we study how writers and artists represent the trauma of sexual assault. From Harriet Jacobs’s 1861 <em>Incidents of the Life in a Slave Girl</em>, to Thomas Hardy’s 1891 novel <em>Tess of the D’Urbervilles</em>, to memoirs by campus rape survivors, to new collections of #MeToo-era poetry, writers have long sought to convey the horrors of sexual violence. Informed by intersectional feminist and antiracist theoretical frameworks, we consider a range of sensitive, troubling, and complex &mdash; but nonetheless crucial &mdash; questions, such as: how do writers represent rape? How do writers put into words experiences so deeply rooted in the body? What literary techniques do authors draw on to represent sexual violence? How do we read such narratives &mdash; and what are our duties and obligations in doing so? How do survivors tell their stories? 
+                          </p>
+                        </div>
+                      </div>
+
+                    </article>
+                  </div>
+                </div>
+
+
 
               </article>
             </div>
           </div>
 
-          <div class="tile" id="teaching-item3" style="display: none;">
-            <div class="tile is-parent is-12">
-              <article class="tile is-child notification tile-translucent">
-                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  Subversive Voices: Protest and Resistance in Contemporary Global Fiction
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University English Department
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    EN 121: Readings in World Literature &bull; Spring 2017
-                  <hr style="border-color: grey;">
-                </h1>
-
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/EN 121 S17 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/assignments/World Literature Paper Assignment.pdf" target="_blank">Paper Assignment</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Final Exam EN121.pdf" target="_blank">Final Exam</a>
 
 
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <p >
-                      This course focuses on works of contemporary fiction by Caribbean, South American, East Asian, South Asian, African, and Middle Eastern writers. We explore narratives that interrogate normative gender codes (of both femininity and masculinity), forces of colonialism and imperialism, environmental racism, and other forms of marginalization and oppression. Topics of discussion include authors’ literary imaginations of various strategies of protest and modes of resistance &mdash; even those located in unexpected places. We interrogate the word “subversion” itself and attend to characters who deploy alternative modes of passive resistance or choose not to resist at all.
-                    </p>
-                  </div>
-                </div>
-
-              </article>
-            </div>
-          </div>
-
-          <div class="tile" id="teaching-item4" style="display: none;">
-            <div class="tile is-parent is-12">
-              <article class="tile is-child notification tile-translucent">
-                <h1 class="title-pages" style="text-align: center;margin-bottom:0.25em;">
-                  <em>La vie Bohème</em>: Art and Counterculture from the Latin Quarter to the Lower East Side
-                </h1>
-                <h1 class="subtitle-pages" style="text-align: center;">
-                    Boston University Writing Program
-                </h1>
-                <h1 class="subsubtitle-pages" style="text-align: center;">
-                    WR 100: First-Year Writing Seminar &bull; Fall 2016
-                  <hr style="border-color: grey;">
-                </h1>
-
-                <div class="columns">
-
-                  <div class="column has-text-centered is-2">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-middle" href="files/teaching/syllabi/WR100 F16 Syllabus Draucker.pdf" target="_blank">Syllabus</a>
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/assignments/Paper 1 Crafting an Academic Argument.pdf" target="_blank">Paper Assignment</a>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <p  style="margin-bottom:0.5em;">
-                      From the cafés of nineteenth-century Paris to the streets of twenty-first- century Williamsburg, bohemianism has long represented a countercultural movement, an aesthetic fantasy, and an unconventional lifestyle based on “art for art’s sake,” elective poverty, and artistic community. In this course, we trace bohemianism’s origins in <em>fin-de-siècle</em> France to its modern-day iterations in hipster culture. We explore questions such as: when, where, how, and why do bohemian communities emerge? What dominant cultures do bohemian artists and thinkers resist? Are bohemians always quite as countercultural as we (or they) might think? Are they even countercultural at all? Who gets to take part in “la vie bohème,” and who gets left out?
-                    </p>
-                  </div>
-                </div>
-
-              </article>
-            </div>
-          </div>
-
-          <!-- <div class="tile" id="teaching-item5" style="display: none;">
-            <div class="tile is-parent is-vertical is-12">
-              <article class="tile is-child notification tile-translucent">
-                <h1 class="title-pages" style="text-align: center;">
-                  Proposed Courses
-                  <hr style="border-color: grey;">
-                </h1>
-
-                <div class="columns">
-                  <div class="column has-text-centered is-8">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/syllabi/Musical Victorians Syllabus.pdf" target="_blank">Musical Victorians: The Social Life of Sound in Nineteenth-Century British Literature</a>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <a class="button is-fullwidth is-dark is-outlined teaching-button-bottom" href="files/teaching/syllabi/Victorian Bestsellers Syllabus.pdf" target="_blank">Forgotten Victorian Bestsellers</a>
-                  </div>
-
-                </div>
-
-              </article>
-            </div>
-          </div> -->
 
           <div class="tile" id="publicWriting" style="display: none;">
             <div class="tile is-parent is-12">
@@ -946,7 +1286,7 @@
       <footer class="card-footer">
         <p class="card-footer-item" style="justify-content: flex-start;">
           <span>
-            Copyright &copy; 2020, Shannon Draucker. All rights reserved. Last updated June 25, 2020.
+            Copyright &copy; 2020, Shannon Draucker. All rights reserved. Last updated October 18, 2020.
           </span>
         </p>
         <p class="card-footer-item" style="justify-content: flex-end;">
