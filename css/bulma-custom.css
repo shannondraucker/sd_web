@@ -9704,3 +9704,8 @@ label.panel-heading {
 .nonnav {
   display: block !important;
 }
+
+.has-text-centered p {
+  margin-top: 1em;
+}
+}
