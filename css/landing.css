@@ -71,7 +71,7 @@ html,body {
 }
 
 .circular-portrait img {
-  height: 165%;
+  height: 160%;
   width: auto;
   max-width: 200% !important;
   margin-left: -35px;
