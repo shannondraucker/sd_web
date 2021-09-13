@@ -71,11 +71,11 @@ html,body {
 }
 
 .circular-portrait img {
-  height: 200%;
+  height: 165%;
   width: auto;
   max-width: 200% !important;
   margin-left: -35px;
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 .tile-transparent {
