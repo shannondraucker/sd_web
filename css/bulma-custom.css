@@ -9708,4 +9708,7 @@ label.panel-heading {
 .has-text-centered p {
   margin-top: 1em;
 }
+
+.button.is-black:hover, .button.is-black:is-hovered {
+  background-color: #b5b5b5
 }
