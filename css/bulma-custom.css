@@ -5958,10 +5958,10 @@ a.dropdown-item.is-active {
 
 .modal-card-title {
   color: #363636;
-  flex-grow: 1;
-  flex-shrink: 0;
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
   font-size: 1.5rem;
-  line-height: 1;
+  /* line-height: 1; */
 }
 
 .modal-card-foot {

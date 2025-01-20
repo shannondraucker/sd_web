@@ -155,3 +155,14 @@ $(".dropdown-normal .button").click(function (){
         $(this).removeClass('is-active');
     });
 });
+
+$(".modal-button").click(function() {
+  var target = $(this).data("target");
+  $("html").addClass("is-clipped");
+  $(target).addClass("is-active");
+});
+
+$(".modal-close-custom").click(function() {
+  $("html").removeClass("is-clipped");
+  $(this).parent().parent().parent().parent().removeClass("is-active");
+});
