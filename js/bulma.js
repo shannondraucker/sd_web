@@ -156,13 +156,12 @@ $(".dropdown-normal .button").click(function (){
     });
 });
 
-$(".modal-button").click(function() {
-  var target = $(this).data("target");
+function openModal(id) {
   $("html").addClass("is-clipped");
-  $(target).addClass("is-active");
-});
+  $("#"+id).addClass("is-active");
+}
 
-$(".modal-close-custom").click(function() {
+function closeModal(id) {
   $("html").removeClass("is-clipped");
-  $(this).parent().parent().parent().parent().removeClass("is-active");
-});
+  $("#"+id).removeClass("is-active");
+}
